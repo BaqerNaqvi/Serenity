@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36327.8 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerenityAdmin", "SerenityAdmin\SerenityAdmin.csproj", "{55305011-B9CE-4454-8983-351335AF9DDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{062069A6-1F80-4343-8A0A-516EBDBF2860}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{55305011-B9CE-4454-8983-351335AF9DDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55305011-B9CE-4454-8983-351335AF9DDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55305011-B9CE-4454-8983-351335AF9DDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{062069A6-1F80-4343-8A0A-516EBDBF2860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{062069A6-1F80-4343-8A0A-516EBDBF2860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{062069A6-1F80-4343-8A0A-516EBDBF2860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{062069A6-1F80-4343-8A0A-516EBDBF2860}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

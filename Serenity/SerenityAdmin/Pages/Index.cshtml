@@ -4,7 +4,44 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
+<div class="text-center mb-4">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>Below is a list of dummy users fetched from the Admin API.</p>
 </div>
+
+<table class="table table-striped" id="usersTable">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- rows will be injected by script -->
+    </tbody>
+</table>
+
+@section Scripts {
+<script>
+    (function () {
+        const tbody = document.querySelector('#usersTable tbody');
+        fetch('/api/Admin')
+            .then(r => {
+                if (!r.ok) throw new Error('Failed to load users');
+                return r.json();
+            })
+            .then(users => {
+                tbody.innerHTML = '';
+                users.forEach(u => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td>${u.id}</td><td>${u.name}</td><td>${u.email}</td>`;
+                    tbody.appendChild(tr);
+                });
+            })
+            .catch(err => {
+                tbody.innerHTML = `<tr><td colspan="3" class="text-danger">${err.message}</td></tr>`;
+            });
+    })();
+</script>
+}
